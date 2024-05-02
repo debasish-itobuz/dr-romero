@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Sofia';
+  font-weight: 400;
+  src: local('Sofia Pro Regular'), url('/src/fonts/Regular.woff');
+}
+
+@font-face {
+  font-family: 'Sofia';
+  font-weight: 500;
+  src: local('Sofia Pro Bold'), url('/src/fonts/SemiBold.woff');
+}
+
+@font-face {
+  font-family: 'Sofia';
+  font-weight: 600;
+  src: local('Sofia Pro Bold'), url('/src/fonts/Bold.woff');
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
