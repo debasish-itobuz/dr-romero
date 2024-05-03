@@ -84,6 +84,34 @@
   }
 }
 
+.imghead {
+  position: relative; 
+
+  .imgtail {
+    position: absolute; 
+    height: 40%; 
+    background-color:rgba($color: #474343, $alpha: 0.4); 
+    color: white;
+    bottom: 0;
+    width: 100%; 
+    text-align:center;
+    display: none;
+    align-items: start;
+    padding: 10px;
+    // justify-content: space-around;
+    flex-direction: column;
+    border-radius: 0 0 15px 15px;
+
+    
+}
+&:hover {
+  .imgtail {
+    display: flex;
+    cursor: pointer;
+}
+}
+}
+
 @media (min-width: 768px) {
   .our-team {
     &-heading {
