@@ -119,9 +119,14 @@
         background-color: #EAEEF5;
         margin-top: 2rem;
         font-size: 18px;
+        width: 100%;
         color: var(--dark);
         padding: 3rem;
         text-align: center;
+
+        &-link {
+            text-decoration: none;
+        }
     }
 }
 
