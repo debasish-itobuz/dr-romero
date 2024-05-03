@@ -29,7 +29,7 @@
   &:hover {
     --background-color: #a4c2f6;
     color: black;
-    transition:.2s ease-in-out;
+    transition: .2s ease-in-out;
   }
 }
 
@@ -42,11 +42,11 @@
   }
 }
 
-.btn-submit {
+.blog-submit {
   justify-content: center;
   align-items: center;
   padding: 10px 20px;
-  border:0;
+  border: 0;
   margin: 0;
   margin-left: auto;
   border-radius: 0px 8px 8px 0px;
@@ -54,5 +54,5 @@
 
 .footer-submit {
   margin-top: 0;
-  margin-left: 0; 
+  margin-left: 0;
 }

@@ -1,16 +1,3 @@
-@import 'font.scss';
-@import 'header.scss';
-@import 'helper.scss';
-@import 'container.scss';
-@import 'banner.scss';
-@import 'service.scss';
-@import 'consultation.scss';
-@import 'team.scss';
-@import 'choose.scss';
-@import 'testimonial.scss';
-@import 'blog.scss';
-@import 'footer.scss';
-
 * {
   margin: 0;
   padding: 0;
@@ -22,8 +9,20 @@ body {
   font-weight: 400;
 }
 
-.semi-bold
-{
+@import "font.scss";
+@import "header.scss";
+@import "helper.scss";
+@import "container.scss";
+@import "banner.scss";
+@import "service.scss";
+@import "consultation.scss";
+@import "team.scss";
+@import "choose.scss";
+@import "testimonial.scss";
+@import "blog.scss";
+@import "footer.scss";
+
+.semi-bold {
   font-weight: 500;
 }
 

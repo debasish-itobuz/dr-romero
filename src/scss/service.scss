@@ -29,7 +29,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: #394F73;
+            color: var(--dark);
             font-size: 17px;
             font-weight: 400;
             cursor: pointer;
@@ -42,6 +42,7 @@
             &-para {
                 font-size: 16px;
                 line-height: 19px;
+                width: 63%;
             }
 
             &:hover {
@@ -70,6 +71,7 @@
 
                 &-para {
                     font-size: 18px;
+                    width: 67%;
                 }
             }
         }
@@ -83,6 +85,12 @@
         &-content {
             grid-template-columns: repeat(8, 1fr);
             padding: 0 1.6rem;
+
+            &-item {
+                &-para {
+                    width: 100%;
+                }
+            }
         }
     }
 }
@@ -91,6 +99,24 @@
     .service {
         &-content {
             padding: 0 10rem;
+
+            &-item {
+                &-para {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1600px) {
+    .service {
+        &-content {
+            &-item {
+                &-para {
+                    width: 72%;
+                }
+            }
         }
     }
 }
