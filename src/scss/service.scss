@@ -1,6 +1,6 @@
 .service {
-    margin-top: 15rem;
-    margin-bottom: 5rem;
+    margin-top: 12rem;
+    margin-bottom: 4rem;
 
     &-text {
         text-align: center;
@@ -12,13 +12,13 @@
         text-align: center;
         color: var(--black);
         font-size: 32px;
-        margin-top: 1.5rem;
+        margin-top: 0.5rem;
         line-height: 72px;
     }
 
     &-content {
         display: grid;
-        gap: 2rem;
+        // gap: 2rem;
         grid-template-columns: repeat(2, 1fr);
         background-image: linear-gradient(to bottom, #fff, #EAF0FF);
 
@@ -35,13 +35,13 @@
             cursor: pointer;
             padding: 1rem 0;
 
-            img {
-                max-width: 70px;
-            }
+            // img {
+            //     max-width: 70px;
+            // }
 
             &-para {
                 font-size: 16px;
-                line-height: 19px;
+                line-height: 22px;
                 width: 63%;
             }
 
@@ -65,9 +65,9 @@
             padding: 0 2rem;
 
             &-item {
-                img {
-                    max-width: 100px;
-                }
+                // img {
+                //     max-width: 100px;
+                // }
 
                 &-para {
                     font-size: 18px;
@@ -80,10 +80,11 @@
 
 @media (min-width:1024px) {
     .service {
-        margin-top: 5rem;
+        margin-top: -5rem;
 
         &-content {
             grid-template-columns: repeat(8, 1fr);
+            gap: 1rem;
             padding: 0 1.6rem;
 
             &-item {

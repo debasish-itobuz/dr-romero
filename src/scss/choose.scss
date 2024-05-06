@@ -1,5 +1,5 @@
 .choose {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     padding: 5rem 0;
     background-color: #FFF5E7;
 
@@ -13,13 +13,13 @@
         text-align: center;
         color: var(--black);
         font-size: 30px;
-        margin-top: 1.2rem;
-        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
     &-content {
         display: grid;
-        gap: 2rem;
+        // gap: 0.5rem;
         grid-template-columns: repeat(1, 1fr);
         margin: auto;
         width: 80%;
@@ -36,19 +36,21 @@
             margin-top: 0;
 
             &-heading {
+                text-align: center;
                 color: var(--dark);
                 font-size: 24px;
                 line-height: 30px;
                 font-weight: 600;
-                width: 70%;
+                // width: 70%;
             }
 
             &-para {
+                text-align: center;
                 color: var(--deep-gray);
-                font-size: 17px;
+                font-size: 16px;
                 line-height: 22px;
-                width: 70%;
-                text-align: start;
+                // width: 70%;
+                // text-align: start;
             }
         }
     }
@@ -62,10 +64,7 @@
 
         &-content {
             grid-template-columns: repeat(2, 1fr);
-
-            &-item {
-                align-items: start;
-            }
+            gap:0 1.5rem;
         }
     }
 }
@@ -76,12 +75,19 @@
             grid-template-columns: repeat(4, 1fr);
 
             &-item {
+                align-items: start;
+                padding: 1rem;
+
+
                 &-heading {
                     width: 90%;
+                    text-align: start;
                 }
 
                 &-para {
-                    width: 90%;
+                    // width: 90%;
+                    text-align: start;
+
                 }
             }
         }

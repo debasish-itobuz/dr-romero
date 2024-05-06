@@ -1,286 +1,290 @@
 .testimonial {
-    margin-bottom: 5rem;
+  margin-bottom: 4rem;
 
-    &-text {
-        text-align: center;
-        color: var(--gray);
-        font-size: 17px;
+  &-text {
+    text-align: center;
+    color: var(--gray);
+    font-size: 17px;
+  }
+
+  &-heading {
+    text-align: center;
+    color: var(--black);
+    font-size: 30px;
+    // margin-top: 1rem;
+    // margin-bottom: 1rem;
+    line-height: 72px;
+  }
+
+  &-items {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // gap: 1rem;
+
+    &-content {
+      position: relative;
+      justify-content: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+      background-color: white;
+
+      &-img {
+        // width: 20rem;
+        position: relative;
+      }
+
+      &-bg {
+        // width: 100%;
+      }
+
+      &-info {
+        position: absolute;
+        left: 63px;
+        top: 56px;
+        // height: 12rem;
+        border-radius: 50%;
+      }
+
+      &-subimgs {
+        position: absolute;
+
+        &-man-bg,
+        &-man-img,
+        &-girl-bg,
+        &-girl-img,
+        &-boy-bg,
+        &-boy-img,
+        &-lady-bg,
+        &-lady-img {
+          position: absolute;
+          display: none;
+        }
+      }
     }
 
-    &-heading {
-        text-align: center;
-        color: var(--black);
-        font-size: 30px;
-        margin-top: 1.2rem;
+    &-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      &-heading {
+        color: var(--dark);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+      }
+
+      &-para {
+        color: var(--gray);
+        font-size: 16px;
+      }
+
+      &-star {
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
         margin-bottom: 1rem;
-        line-height: 72px;
+      }
+
+      &-sub-para {
+        color: #30405b;
+        font-size: 18px;
+        line-height: 27px;
+        width: 90%;
+        text-align: center;
+      }
+
+      &-left-arrow {
+        position: absolute;
+        left: 50px;
+        bottom: -20px;
+      }
+
+      &-left-arrow-move {
+        position: absolute;
+        left: 31px;
+        bottom: -30px;
+      }
+
+      &-right-arrow {
+        position: absolute;
+        right: 50px;
+        bottom: -20px;
+      }
+
+      &-right-arrow-move {
+        position: absolute;
+        right: 31px;
+        bottom: -29px;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial {
+    &-heading {
+      font-size: 40px;
     }
 
     &-items {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 1rem;
+      &-left-arrow {
+        left: 200px;
+      }
 
-        &-content {
-            position: relative;
-            justify-content: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 1rem;
-            background-color: white;
-
-            &-img {
-                width: 20rem;
-                position: relative;
-            }
-
-            &-bg {
-                width: 100%;
-            }
-
-            &-info {
-                position: absolute;
-                left: 65px;
-                top: 65px;
-                height: 12rem;
-                border-radius: 50%;
-            }
-
-            &-subimgs {
-                position: absolute;
-
-                &-man-bg,
-                &-man-img,
-                &-girl-bg,
-                &-girl-img,
-                &-boy-bg,
-                &-boy-img,
-                &-lady-bg,
-                &-lady-img {
-                    position: absolute;
-                    display: none;
-                }
-            }
-        }
-
-        &-data {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-
-            &-heading {
-                color: var(--dark);
-                font-size: 30px;
-                font-weight: 600;
-                line-height: 30px;
-            }
-
-            &-para {
-                color: var(--gray);
-                font-size: 16px;
-            }
-
-            &-star {
-                width: 20px;
-                 display: flex; 
-                 justify-content: center; 
-                 gap: 5px;
-                 margin-bottom: 1rem;
-            }
-
-            &-sub-para {
-                color: #30405b;
-                font-size: 22px;
-                line-height: 33px;
-                width: 90%;
-                text-align: center;
-            }
-
-            &-left-arrow {
-                position: absolute;
-                left: 50px;
-                bottom: -20px;
-            }
-
-            &-left-arrow-move {
-                position: absolute;
-                left: 31px;
-                bottom: -30px;
-            }
-
-            &-right-arrow {
-                position: absolute;
-                right: 50px;
-                bottom: -20px;
-            }
-
-            &-right-arrow-move {
-                position: absolute;
-                right: 31px;
-                bottom: -29px;
-            }
-        }
+      &-right-arrow {
+        right: 200px;
+      }
     }
+  }
 }
 
-@media (min-width:768px) {
-    .testimonial {
-        &-heading {
-            font-size: 40px;
+@media (min-width: 1024px) {
+  .testimonial {
+    overflow: hidden;
+
+    &-items {
+      &-content {
+        &-bg {
+          width: 25rem;
+          height: 25rem;
         }
 
-        &-items {
-            &-left-arrow {
-                left: 200px;
-            }
-
-            &-right-arrow {
-                right: 200px;
-            }
+        &-img {
+          // width: 22rem;
         }
+
+        &-info {
+          width: 15rem;
+          height: 15rem;
+          left: 81px;
+          top: 75px;
+        }
+
+        &-subimgs {
+          top: 10%;
+          right: 133%;
+
+          &-man-bg {
+            display: block;
+            top: -10px;
+            left: -150px;
+          }
+
+          &-man-img {
+            display: block;
+            top: 0;
+            left: -150px;
+            z-index: 1;
+          }
+
+          &-girl-bg {
+            display: block;
+            top: 112px;
+            left: -50px;
+          }
+
+          &-girl-img {
+            display: block;
+            top: 120px;
+            left: -105px;
+            z-index: 1;
+          }
+
+          &-boy-bg {
+            display: block;
+            top: -14px;
+            left: 566px;
+          }
+
+          &-boy-img {
+            display: block;
+            top: 15px;
+            left: 630px;
+            z-index: 1;
+          }
+
+          &-lady-bg {
+            display: block;
+            top: 145px;
+            left: 611px;
+          }
+
+          &-lady-img {
+            display: block;
+            top: 135px;
+            left: 565px;
+            z-index: 1;
+          }
+        }
+      }
+
+      &-data {
+        &-sub-para {
+          width: 66%;
+        }
+
+        &-left-arrow {
+          left: 50px;
+          bottom: 120px;
+        }
+
+        &-left-arrow-move {
+          left: 31px;
+          bottom: 110px;
+        }
+
+        &-right-arrow {
+          right: 50px;
+          bottom: 120px;
+        }
+
+        &-right-arrow-move {
+          right: 31px;
+          bottom: 111px;
+        }
+      }
     }
+  }
 }
 
-
-@media (min-width:1024px) {
-    .testimonial {
-        overflow: hidden;
-
-        &-items {
-            &-content {
-                &-img {
-                    width: 22rem;
-                }
-
-                &-info {
-                    width: 14rem;
-                    height: 14rem;
-                    left: 65px;
-                    top: 65px;
-                }
-
-                &-subimgs {
-                    top: 10%;
-                    right: 133%;
-
-                    &-man-bg {
-                        display: block;
-                        top: -10px;
-                        left: -150px;
-                    }
-
-                    &-man-img {
-                        display: block;
-                        top: 0;
-                        left: -150px;
-                        z-index: 1;
-                    }
-
-                    &-girl-bg {
-                        display: block;
-                        top: 112px;
-                        left: -50px;
-                    }
-
-                    &-girl-img {
-                        display: block;
-                        top: 120px;
-                        left: -105px;
-                        z-index: 1;
-                    }
-
-                    &-boy-bg {
-                        display: block;
-                        top: -14px;
-                        left: 566px;
-                    }
-
-                    &-boy-img {
-                        display: block;
-                        top: 15px;
-                        left: 630px;
-                        z-index: 1;
-                    }
-
-                    &-lady-bg {
-                        display: block;
-                        top: 145px;
-                        left: 611px;
-                    }
-
-                    &-lady-img {
-                        display: block;
-                        top: 135px;
-                        left: 565px;
-                        z-index: 1;
-                    }
-                }
-            }
-
-            &-data {
-                &-sub-para {
-                    width: 66%;
-                }
-
-                &-left-arrow {
-                    left: 50px;
-                    bottom: 120px;
-                }
-
-                &-left-arrow-move {
-                    left: 31px;
-                    bottom: 110px;
-                }
-
-                &-right-arrow {
-                    right: 50px;
-                    bottom: 120px;
-                }
-
-                &-right-arrow-move {
-                    right: 31px;
-                    bottom: 111px;
-                }
-            }
+@media (min-width: 1440px) {
+  .testimonial {
+    &-items {
+      &-data {
+        &-sub-para {
+          width: 41%;
         }
-    }
-}
 
-@media (min-width:1440px) {
-    .testimonial {
-        &-items {
-            &-data {
-                &-sub-para {
-                    width: 41%;
-                }
-
-                &-left-arrow {
-                    left: 300px;
-                    bottom: 120px;
-                }
-
-                &-left-arrow-move {
-                    left: 281px;
-                    bottom: 110px;
-                }
-
-                &-right-arrow {
-                    right: 300px;
-                    bottom: 120px;
-                }
-
-                &-right-arrow-move {
-                    right: 281px;
-                    bottom: 111px;
-                }
-            }
+        &-left-arrow {
+          left: 300px;
+          bottom: 120px;
         }
+
+        &-left-arrow-move {
+          left: 281px;
+          bottom: 110px;
+        }
+
+        &-right-arrow {
+          right: 300px;
+          bottom: 120px;
+        }
+
+        &-right-arrow-move {
+          right: 281px;
+          bottom: 111px;
+        }
+      }
     }
+  }
 }

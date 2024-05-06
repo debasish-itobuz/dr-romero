@@ -10,15 +10,15 @@
     list-style: none;
     margin-left: auto;
     left: 0;
-    top: 80px;
+    top: 66px;
     width: 100vw;
     position: absolute;
     background-color: #fff;
-    padding: 15px 25px;
+    padding: 2px 16px;
     z-index: 2;
     font-size: 17px;
     text-wrap: nowrap;
-    gap:1rem;
+    gap:.2rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     &-item {
@@ -68,20 +68,20 @@
       cursor: pointer;
     }
 
-    &-collapse {
-      display: block;
-      cursor: pointer;
-      border: 0;
-      background-color: transparent;
-
-      &-img {
-        width: 1.6rem;
+    &-bars {
+      &-collapse {
+        display: block;
+        cursor: pointer;
+        border: 0;
+        background-color: transparent;
+  
+        &-img {
+          width: 1.6rem;
+        }
       }
     }
   }
 }
-
-
 
 @media (min-width: 1024px) {
   .navbar {
@@ -92,6 +92,7 @@
       justify-content: end;
       align-items: center;
       opacity: unset;
+      gap: 1rem;
       background-color: white;
       box-shadow: none;
 
@@ -99,12 +100,12 @@
         width: unset;
       }
 
-      &-collapse {
-        display: none;
-      }
-
       &-bars {
         display: none;
+
+        &-collapse {
+          display: none;
+        }
       }
     }
   }

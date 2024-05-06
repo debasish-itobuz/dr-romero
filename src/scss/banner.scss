@@ -36,7 +36,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: start;
-                gap: 2rem;
+                gap: 1rem;
                 text-align: center;
                 position: relative;
                 flex-shrink: 0;
@@ -46,26 +46,28 @@
 
             &-para {
                 color: var(--blue);
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 400;
             }
 
             &-heading {
                 color: var(--black);
-                font-size: 44px;
+                font-size: 42px;
                 font-weight: 500;
-                line-height: 54px;
+                line-height: 45px;
             }
 
             &-sub-para {
+                text-align: center;
                 color: var(--dark);
-                font-size: 17px;
-                line-height: 26px;
-                max-width: 300px;
+                font-size: 15px;
+                line-height: 22px;
+                // max-width: 300px;
             }
 
             &-img {
                 img {
+                    // margin-top: 1.5rem;
                     position: relative;
                     width: 100%;
                     max-width: 600px;
@@ -78,11 +80,11 @@
 
     &-data {
         display: flex;
-        height: 150px;
+        height: 130px;
         gap: 1rem;
         align-items: center;
         width: 100%;
-        bottom: -150px;
+        // bottom: -150px;
         position: absolute;
         background-color: var(--dark-blue);
 
@@ -104,6 +106,8 @@
         }
 
         &-para {
+            font-size: 16px;
+            line-height: 22px;
             color: rgb(224, 218, 218);
         }
 
@@ -121,49 +125,57 @@
     }
 }
 
+// @media (min-width:768px) {
+//     .banner {
+//         margin-bottom: 10rem;
+//         flex-direction: row;
+//         padding: 0;
+
+//         &-content {
+//             &-links {
+//                 display: flex;
+//             }
+
+//             &-hero {
+//                 margin-top: -5rem;
+//                 align-items: center;
+//                 gap: 20px;
+
+//                 &-text {
+//                     width: 30rem;
+//                     text-align: start;
+//                     margin-top: 8rem;
+//                 }
+
+//                 &-heading {
+//                     width: 70%;
+//                     font-size: 50px;
+//                     line-height: 50px;
+//                 }
+//             }
+//         }
+
+//         &-data {
+//             justify-content: center;
+//         }
+//     }
+// }
+
 @media (min-width:768px) {
     .banner {
-        margin-bottom: 10rem;
-        flex-direction: row;
-        padding: 0;
-
-        &-content {
-            &-links {
-                display: flex;
-            }
-
-            &-hero {
-                align-items: center;
-                gap: 20px;
-
-                &-text {
-                    width: 30rem;
-                    text-align: start;
-                    margin-top: 8rem;
-                }
-
-                &-heading {
-                    font-size: 70px;
-                    line-height: 66px;
-                }
-            }
-        }
-
-        &-data {
-            justify-content: center;
-        }
-    }
-}
-
-@media (min-width:1024px) {
-    .banner {
         &-content {
             &-hero {
+                margin-top: .3rem;
                 align-items: start;
                 flex-direction: row;
                 overflow: hidden;
 
                 &-text {
+                    width:40% ;
+
+
+
+
                     &::before {
                         content: "";
                         position: absolute;
@@ -188,9 +200,9 @@
 
                 &-img {
                     img {
-                        margin-left: -200px;
-                        height: 715px;
-                        max-width: unset;
+                        // margin-left: -200px;
+                        height: 600px;
+                        // max-width: unset;
                         width: fit-content;
                         padding-top: 80px;
                         object-fit: contain;
