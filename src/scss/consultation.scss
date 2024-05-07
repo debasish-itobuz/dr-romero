@@ -132,7 +132,7 @@
 
 @media (min-width: 1024px) {
   .consultation {
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
 
     &-items {
       gap:2rem;
@@ -219,6 +219,7 @@
 
 @media (min-width: 1440px) {
   .consultation {
+    padding-bottom: 4rem;
     &-items {
       padding: 0 7rem;
     }

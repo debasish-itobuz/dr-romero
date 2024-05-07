@@ -46,6 +46,7 @@
     align-items: start;
     grid-template-columns: repeat(1, 1fr);
     margin-top: 3rem;
+    margin-bottom: 2rem;
     gap: 2rem;
 
     &-list {
@@ -82,24 +83,24 @@
         cursor: pointer;
       }
 
-      @media (min-width:425px){
-          grid-template-columns: repeat(2, 1fr);
+      @media (min-width:425px) {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   }
 }
 
 .imghead {
-  position: relative; 
+  position: relative;
 
   .imgtail {
-    position: absolute; 
-    height: 40%; 
-    background-color:rgba($color: #474343, $alpha: 0.4); 
+    position: absolute;
+    height: 40%;
+    background-color: rgba($color: #474343, $alpha: 0.4);
     color: white;
     bottom: 0;
-    width: 100%; 
-    text-align:center;
+    width: 100%;
+    text-align: center;
     display: none;
     align-items: start;
     padding: 10px;
@@ -107,14 +108,15 @@
     flex-direction: column;
     border-radius: 0 0 15px 15px;
 
-    
-}
-&:hover {
-  .imgtail {
-    display: flex;
-    cursor: pointer;
-}
-}
+
+  }
+
+  &:hover {
+    .imgtail {
+      display: flex;
+      cursor: pointer;
+    }
+  }
 }
 
 
@@ -136,7 +138,7 @@
       grid-template-columns: repeat(2, 1fr);
 
       &-link {
-        line-height: 40px;
+        line-height: 46px;
       }
 
       &-images {
@@ -150,7 +152,7 @@
   .our-team {
     &-content {
       &-link {
-        line-height: 44px;
+        line-height: 40px;
       }
 
       &-images {
@@ -164,12 +166,12 @@
 
 @media (min-width: 1440px) {
   .our-team {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
     background-image: url("../images/content/images/team/team-bg.svg");
     background-size: 80%;
     width: 80%;
     text-align: center;
-    background-position: top -60px right -40px;
+    background-position: top -60px right -80px;
     background-repeat: no-repeat;
 
     &-para {
