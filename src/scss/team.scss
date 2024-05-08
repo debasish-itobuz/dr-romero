@@ -57,9 +57,6 @@
     &-item {
       list-style: none;
       display: flex;
-    }
-
-    &-link {
       line-height: 36px;
       text-decoration: none;
       color: var(--dark);
@@ -72,6 +69,19 @@
       }
     }
 
+    // &-link {
+    //   line-height: 36px;
+    //   text-decoration: none;
+    //   color: var(--dark);
+    //   cursor: pointer;
+    //   font-weight: 400;
+    //   font-size: 24px;
+
+    //   &:hover {
+    //     color: var(--blue);
+    //   }
+    // }
+
     &-images {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
@@ -79,7 +89,7 @@
       margin: auto;
 
       img {
-        border-radius: 10%;
+        border-radius: 15px;
         cursor: pointer;
       }
 
@@ -113,6 +123,7 @@
 
   &:hover {
     .imgtail {
+      bottom: 4px;
       display: flex;
       cursor: pointer;
     }
@@ -137,7 +148,7 @@
     &-content {
       grid-template-columns: repeat(2, 1fr);
 
-      &-link {
+      &-item {
         line-height: 46px;
       }
 
@@ -151,7 +162,7 @@
 @media (min-width: 1024px) {
   .our-team {
     &-content {
-      &-link {
+      &-item {
         line-height: 40px;
       }
 
