@@ -17,8 +17,7 @@
   }
 
   &-items {
-    // margin-top: 5rem;
-    // gap: 2rem;
+    margin-bottom: 2rem;
 
     &-data {
       display: flex;
@@ -107,6 +106,7 @@
     }
 
     &-items {
+      margin-bottom: 5rem;
       &-data {
         flex-wrap: nowrap;
       }
@@ -219,7 +219,7 @@
 
 @media (min-width: 1440px) {
   .consultation {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     &-items {
       padding: 0 7rem;
     }

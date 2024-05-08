@@ -100,13 +100,13 @@
   }
 }
 
-.imghead {
+.profileImage {
   position: relative;
 
-  .imgtail {
+  .profileDetails {
     position: absolute;
     height: 40%;
-    background-color: rgba($color: #474343, $alpha: 0.4);
+    background-color: rgba($color: #020B1B, $alpha: 0.4);
     color: white;
     bottom: 0;
     width: 100%;
@@ -122,7 +122,7 @@
   }
 
   &:hover {
-    .imgtail {
+    .profileDetails {
       bottom: 4px;
       display: flex;
       cursor: pointer;

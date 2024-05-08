@@ -93,10 +93,18 @@
 
             &-text {
                 color: var(--dark);
+                text-decoration: none;
+
 
                 &:hover {
                     color: var(--blue);
                 }
+            }
+
+            &-address{
+                color: var(--dark);
+                cursor:default;
+
             }
         }
 
@@ -137,11 +145,12 @@
 @media (min-width:768px) {
     .footer {
         grid-template-columns: repeat(2, 1fr);
+        gap:0.5rem;
         margin-top: 12rem;
 
         &-content {
             &-heading {
-                font-size: 36px;
+                font-size: 34px;
                 padding-top: 0.5rem;
                 
             }
@@ -198,6 +207,9 @@
         &-content {
             &-item {
                 &-text {
+                    width: 55%;
+                }
+                &-address {
                     width: 55%;
                 }
             }
