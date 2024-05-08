@@ -37,7 +37,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD",
   },
-
   {
     name: " Dr. Rex",
     role: "Cardiologists",
@@ -50,7 +49,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MBBS",
   },
-
   {
     name: " Dr. Kirti",
     role: "Gastroenterologist",
@@ -63,7 +61,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MBBS",
   },
-
   {
     name: " Dr. Kirti",
     role: "Gynecologist",
@@ -76,7 +73,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD",
   },
-
   {
     name: " Dr. Brendon",
     role: "ENT Specialist",
@@ -89,7 +85,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/lady.webp",
     details: "MS",
   },
-
   {
     name: " Dr. Brendon",
     role: "Pulmonologist",
@@ -102,7 +97,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MBBS",
   },
-
   {
     name: " Dr. Kirti",
     role: "Oncologist",
@@ -121,7 +115,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/brendon.webp",
     details: "MBBS",
   },
-
   {
     name: " Dr. Saas",
     role: "Gastroenterologist",
@@ -134,7 +127,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/brendon.webp",
     details: "MBBS",
   },
-
   {
     name: " Dr. Andrew",
     role: "Gynecologist",
@@ -147,14 +139,12 @@ const doctors = [
     imgUrl: "./images/content/images/team/lady.webp",
     details: "MD MS",
   },
-
   {
     name: " Dr. Andh",
     role: "Paediatrician",
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MBBS",
   },
-
   {
     name: " Dr. And",
     role: "Pulmonologist",
@@ -167,7 +157,6 @@ const doctors = [
     imgUrl: "./images/content/images/team/lady.webp",
     details: "MBBS MD",
   },
-
   {
     name: " Dr. Kirti",
     role: "Endocrinologist",
