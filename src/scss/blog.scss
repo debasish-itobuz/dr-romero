@@ -31,13 +31,6 @@
             overflow: hidden;
             text-decoration: none;
 
-            &-img {
-                // img {
-                //     height: 100%;
-                //     width: 100%;
-                // }
-            }
-
             &-details {
                 padding: 25px 20px;
                 display: flex;
@@ -76,7 +69,6 @@
         justify-content: center;
         align-items: center;
         border-radius: 15px;
-        // gap: 1rem;
         border: 1px solid rgb(226, 222, 222);
         overflow: hidden;
         background: linear-gradient(to right, #E7FFFB, #FFFFFF 50%);
@@ -101,7 +93,6 @@
                 color: var(--black);
                 font-size: 25px;
                 line-height: 40px;
-                // margin-bottom: 1rem;
             }
 
             &-input {
@@ -168,15 +159,6 @@
                 position: absolute;
                 right: 0;
                 top: 0;
-                width: 45%;
-            }
-
-            &-img {
-                // width: 30%;
-
-                // img {
-                //     width: 100%;
-                // }
             }
 
             &-data {
@@ -216,7 +198,7 @@
 
 @media (min-width:1440px) {
     .blog {
-  padding-top: 8rem;
+        padding-top: 8rem;
 
         &-items {
             padding: 0 25rem;

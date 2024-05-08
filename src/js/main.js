@@ -7,17 +7,16 @@ const viewAllDoctor = document.querySelector(".viewAllDoctor");
 
 const doctors = [
   {
-    name: " Dr. Andrew",
-    role: "Neurologist",
-    imgUrl: "./images/content/images/team/andrew.webp",
-    details: "MBBS",
-  },
-
-  {
     name: " Dr. Kirti",
     role: "Cardiologists",
     imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD MS",
+  },
+  {
+    name: " Dr. Andrew",
+    role: "Neurologist",
+    imgUrl: "./images/content/images/team/andrew.webp",
+    details: "MBBS",
   },
   {
     name: " Dr. Barlina",
@@ -33,9 +32,9 @@ const doctors = [
     details: "MBBS",
   },
   {
-    name: " Dr. Barlina",
+    name: " Dr. Karolina",
     role: "Nefrologists",
-    imgUrl: "./images/content/images/team/lady.webp",
+    imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD",
   },
 
@@ -74,7 +73,7 @@ const doctors = [
   {
     name: " Dr. Barlina",
     role: "ENT Specialist",
-    imgUrl: "./images/content/images/team/lady.webp",
+    imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD",
   },
 
@@ -215,9 +214,7 @@ function viewAll() {
 }
 
 function showDoctors(role) {
-  // console.log(role)
   const newDoctors = doctors.filter((item) => item.role === role);
-  // console.log(newDoctor)
   doctorContainer.innerHTML = "";
   newDoctors.forEach((item) => {
     const outerDiv = document.createElement("div");
@@ -229,9 +226,7 @@ function showDoctors(role) {
 viewAll();
 
 doctorsList.addEventListener("click", (e) => {
-  // console.log(e.target.className)
   if (e.target.className === "our-team-content-item") {
-    // console.log(e.target.innerText)
     showDoctors(e.target.innerText);
   }
 });

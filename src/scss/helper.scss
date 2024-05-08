@@ -17,7 +17,6 @@
   display: flex;
   margin: auto;
   text-align: center;
-  // margin-top: 2rem;
   padding: 17px 30px;
   font-size: 17px;
   color: white;
@@ -27,12 +26,11 @@
   background-color: var(--background-color);
   box-shadow: 0 8px 34px 0 var(--box-shadow-color);
 
-  @media(min-width: 780px){
+  @media(min-width: 780px) {
     padding: 20px 40px;
   }
 
-
-  @media(min-width: 1440px){
+  @media(min-width: 1440px) {
     margin-top: 3rem;
     padding: 20px 50px;
   }

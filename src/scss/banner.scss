@@ -19,8 +19,7 @@
       }
 
       img:hover {
-        filter: invert(44%) sepia(65%) saturate(4522%) hue-rotate(206deg)
-          brightness(90%) contrast(86%);
+        filter: invert(44%) sepia(65%) saturate(4522%) hue-rotate(206deg) brightness(90%) contrast(86%);
         border-bottom: 2px solid var(--blue);
         transition: 0.2s ease-in-out;
       }
@@ -62,12 +61,10 @@
         color: var(--dark);
         font-size: 15px;
         line-height: 22px;
-        // max-width: 300px;
       }
 
       &-img {
         img {
-          // margin-top: 1.5rem;
           position: relative;
           max-width: 600px;
           object-fit: cover;
@@ -83,7 +80,6 @@
     gap: 1rem;
     align-items: center;
     width: 100%;
-    // bottom: -150px;
     position: absolute;
     background-color: var(--dark-blue);
 
@@ -123,42 +119,6 @@
     }
   }
 }
-
-// @media (min-width:768px) {
-//     .banner {
-//         margin-bottom: 10rem;
-//         flex-direction: row;
-//         padding: 0;
-
-//         &-content {
-//             &-links {
-//                 display: flex;
-//             }
-
-//             &-hero {
-//                 margin-top: -5rem;
-//                 align-items: center;
-//                 gap: 20px;
-
-//                 &-text {
-//                     width: 30rem;
-//                     text-align: start;
-//                     margin-top: 8rem;
-//                 }
-
-//                 &-heading {
-//                     width: 70%;
-//                     font-size: 50px;
-//                     line-height: 50px;
-//                 }
-//             }
-//         }
-
-//         &-data {
-//             justify-content: center;
-//         }
-//     }
-// }
 
 @media (min-width: 768px) {
   .banner {
@@ -202,9 +162,7 @@
 
         &-img {
           img {
-            // margin-left: -200px;
             height: 600px;
-            // max-width: unset;
             margin-bottom: 125px;
             width: fit-content;
             padding-top: 80px;
@@ -227,6 +185,7 @@
       &-links {
         display: flex;
       }
+
       &-hero {
         &-heading {
           font-size: 56px;
@@ -264,6 +223,7 @@
         &-text {
           margin-top: 10rem;
         }
+
         &-heading {
           max-width: 380px;
         }
