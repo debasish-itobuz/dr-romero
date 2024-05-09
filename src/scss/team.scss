@@ -74,6 +74,9 @@
       grid-template-columns: repeat(1, 1fr);
       gap: 1.5rem;
       margin: auto;
+      overflow: scroll;
+      max-height:50vh;
+      // width: 100%;
 
       img {
         border-radius: 15px;
@@ -136,7 +139,8 @@
     }
 
     &-content {
-      grid-template-columns: repeat(2, 1fr);
+      // grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 280px repeat(1, 1fr);
 
       &-item {
         line-height: 46px;
@@ -188,6 +192,10 @@
 
       &-list {
         margin: unset;
+      }
+
+      &-images {
+        max-height:45vh;
       }
     }
   }

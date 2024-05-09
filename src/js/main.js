@@ -195,8 +195,8 @@ const doctorCard = (item) => {
 
 function displayDoctors(doctors) {
   doctorContainer.innerHTML = "";
-  doctors.forEach((item, index) => {
-    if (index >= 6) return;
+  doctors.forEach((item) => {
+    // if (index >= 6) return;
     const outerDiv = document.createElement("div");
     outerDiv.innerHTML = doctorCard(item);
     doctorContainer.append(outerDiv);
