@@ -140,6 +140,10 @@
     }
 }
 
+.address {
+    cursor: default;
+}
+
 @media (min-width:768px) {
     .footer {
         grid-template-columns: repeat(2, 1fr);

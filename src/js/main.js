@@ -4,6 +4,7 @@ const cross = document.querySelector(".cross");
 const doctorsList = document.querySelector(".our-team-content-list");
 const doctorContainer = document.querySelector(".our-team-content-images");
 const viewAllDoctor = document.querySelector(".viewAllDoctor");
+const searchDoctor = document.querySelector(".our-team-input");
 
 const doctors = [
   {
@@ -186,13 +187,13 @@ const doctorCard = (item) => {
   <img src=${item.imgUrl} alt="image" height="180px" width="176px">
   <div class="profileDetails">
     <p>${item.name}</p>
-    <div style="display: flex; justify-content: space-between; align-items: center;">${item.details} <img
-        src="./images/content/images/team/arrow.svg" alt="arrow"> </div>
+    <div class="profileArrow">${item.details} <img
+        src="./images/content/images/team/arrow.svg" alt="arrow" height="35px" width="35px"> </div>
   </div>
 </div>`;
 };
 
-function viewAll() {
+function displayDoctors(doctors) {
   doctorContainer.innerHTML = "";
   doctors.forEach((item, index) => {
     if (index >= 6) return;
@@ -204,15 +205,33 @@ function viewAll() {
 
 function showDoctors(role) {
   const newDoctors = doctors.filter((item) => item.role === role);
-  doctorContainer.innerHTML = "";
-  newDoctors.forEach((item) => {
-    const outerDiv = document.createElement("div");
-    outerDiv.innerHTML = doctorCard(item);
-    doctorContainer.append(outerDiv);
-  });
+  // doctorContainer.innerHTML = "";
+  // newDoctors.forEach((item, index) => {
+  //   if (index >= 6) return;
+  //   const outerDiv = document.createElement("div");
+  //   outerDiv.innerHTML = doctorCard(item);
+  //   doctorContainer.append(outerDiv);
+  // });
+  displayDoctors(newDoctors);
 }
 
-viewAll();
+function searchDoctors(value) {
+  const newDoctors = doctors.filter(
+    (item) =>
+      item.role.toLowerCase().includes(value.toLowerCase()) ||
+      item.name.toLowerCase().includes(value.toLowerCase())
+  );
+  // doctorContainer.innerHTML = "";
+  // newDoctors.forEach((item, index) => {
+  //   if (index >= 6) return;
+  //   const outerDiv = document.createElement("div");
+  //   outerDiv.innerHTML = doctorCard(item);
+  //   doctorContainer.append(outerDiv);
+  // });
+  displayDoctors(newDoctors);
+}
+
+displayDoctors(doctors);
 
 doctorsList.addEventListener("click", (e) => {
   if (e.target.className === "our-team-content-item") {
@@ -220,7 +239,12 @@ doctorsList.addEventListener("click", (e) => {
   }
 });
 
-viewAllDoctor.addEventListener("click", viewAll);
+viewAllDoctor.addEventListener("click", () => displayDoctors(doctors));
+
+searchDoctor.addEventListener("input", (e) => {
+  // console.log(e.target.value)
+  searchDoctors(e.target.value);
+});
 
 bar.addEventListener("click", () => {
   bar.style.display = "none";

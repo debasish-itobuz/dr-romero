@@ -105,6 +105,13 @@
     border-radius: 0 0 15px 15px;
   }
 
+  .profileArrow {
+    display: flex;
+     justify-content: 
+     space-between; 
+     align-items: center;
+  }
+
   &:hover {
     .profileDetails {
       bottom: 4px;
