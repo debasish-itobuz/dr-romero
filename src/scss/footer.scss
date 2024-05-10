@@ -118,6 +118,12 @@
                     border: 1px solid grey;
                 }
             }
+
+            &-warning {
+                margin-top: -0.9rem;
+                margin-left: .5rem;
+                visibility: hidden;
+            }
         }
     }
 

@@ -187,19 +187,19 @@ let patientCount = 0;
 
 cross.style.display = "none";
 
-function validation(i, property) {
+function validation(i, property, warningMessage) {
   if (!property.value.trim()) {
-    warning[i].style.visibility = "visible";
-    warning[i].innerText = `required field !!`;
-    warning[i].style.color = "red";
+   warningMessage.style.visibility = "visible";
+   warningMessage.innerText = `required field !!`;
+   warningMessage.style.color = "red";
     return false;
-  } else if (i === 1 && !/^\S+@\S+\.\S+$/.test(email.value.trim())) {
-    warning[i].style.visibility = "visible";
-    warning[i].innerText = "invalid email!!";
-    warning[i].style.color = "red";
+  } else if (i === 1 && !/^\S+@\S+\.\S+$/.test(property.value.trim())) {
+   warningMessage.style.visibility = "visible";
+   warningMessage.innerText = "invalid email!!";
+   warningMessage.style.color = "red";
     return false;
   } else {
-    warning[i].style.visibility = "hidden";
+    warningMessage.style.visibility = "hidden";
     return true;
   }
 }
@@ -306,9 +306,9 @@ footerSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   console.log(fullName.value);
   if (
-    validation(0, fullName) &&
-    validation(1, email) &&
-    validation(2, message)
+    validation(0, fullName, warning[0]) &&
+    validation(1, email, warning[1]) &&
+    validation(2, message, warning[2])
   ) {
     fullName.value = "";
     email.value = "";
@@ -318,20 +318,7 @@ footerSubmit.addEventListener("click", (e) => {
 
 blogSubmit.addEventListener("click", (e) => {
   e.preventDefault();
-  if (!subscribeEmail.value.trim()) {
-    subscribeWarning.style.visibility = "visible";
-    subscribeWarning.innerText = `required field !!`;
-    subscribeWarning.style.color = "red";
-    
-  } else if(!/^\S+@\S+\.\S+$/.test(subscribeEmail.value.trim())) {
-    subscribeWarning.style.visibility = "visible";
-    subscribeWarning.innerText = "invalid email!!";
-    subscribeWarning.style.color = "red";
-   
-  } else {
-    subscribeWarning.style.visibility = "hidden";
-    subscribeEmail.value="";
-    
+  if (validation(1, subscribeEmail,subscribeWarning )) {
+    subscribeEmail.value = "";
   }
-  
 });

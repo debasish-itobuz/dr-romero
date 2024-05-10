@@ -101,7 +101,7 @@
   <!-- banner ends -->
 
   <!-- services begins -->
-  <section class="service screenSize ">
+  <section class="service screenSize">
     <p class="service-text">Quick solutions</p>
     <h2 class="service-heading">Extensive services</h2>
     <div class="service-content">
@@ -119,7 +119,7 @@
       </a>
       <a href="" class="service-content-item">
         <img src="./images/content/images/services/centre.svg" alt="centre" height="90px" width="90px" />
-        <p class="service-content-item-para centre">Find  Centers</p>
+        <p class="service-content-item-para centre">Find Centers</p>
       </a>
       <a href="" class="service-content-item">
         <img src="./images/content/images/services/wellness.svg" alt="wellness" height="90px" width="90px" />
@@ -133,9 +133,9 @@
         <img src="./images/content/images/services/test.svg" alt="test" height="90px" width="90px" />
         <p class="service-content-item-para">Book Lab Tests</p>
       </a>
-      <a href="" class="service-content-item ">
+      <a href="" class="service-content-item">
         <img src="./images/content/images/services/book.svg" alt="book" height="90px" width="90px" />
-        <p class="service-content-item-para help">Covid  Help</p>
+        <p class="service-content-item-para help">Covid Help</p>
       </a>
     </div>
   </section>
@@ -445,12 +445,13 @@
         <p class="blog-info-data-text">Stay updated always</p>
         <h3 class="blog-info-data-heading">Subscribe Newsletter</h3>
         <form class="blog-info-data-input">
-          <input type="email" placeholder="Email ID" class="blog-info-data-input-box" />
+          <input type="email" placeholder="Email ID" class="blog-info-data-input-box subscribeEmail" />
           <button class="btn-common blog-submit" type="submit">
             Submit
             <img src="./images/content/images/blog/arrow.svg" alt="arrow" height="100%" width="100%" />
           </button>
         </form>
+        <span class="blog-info-data-warning">warning</span>
       </div>
     </div>
   </section>
@@ -526,14 +527,22 @@
     <div class="footer-content">
       <h2 class="footer-content-heading">Let's Connect</h2>
       <form class="footer-content-form">
-        <input type="text" placeholder="Full Name" />
-        <input type="email" placeholder="Email" />
-        <input type="text" placeholder="Your Message" />
+        <input type="text" placeholder="Full Name" class="name" />
+        <span class="footer-content-form-warning nameWarning">name warning
+        </span>
+        <input type="email" placeholder="Email" class="email" />
+        <span class="footer-content-form-warning emailWarning">email warning
+        </span>
+
+        <input type="text" placeholder="Your Message" class="message" />
+        <span class="footer-content-form-warning messageWarning">msg warning
+        </span>
+
         <button type="Submit" class="btn-common footer-submit">Submit</button>
       </form>
     </div>
   </footer>
-  <div class="footer-textscreenSize ">
+  <div class="footer-text screenSize">
     <a href="" class="footer-text-link">&#169; 2021 Design Studio All Rights Reserved</a>
   </div>
   <!-- footer ends -->
