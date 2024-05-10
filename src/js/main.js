@@ -16,6 +16,13 @@ const footerSubmit = document.querySelector(".footer-submit");
 const subscribeWarning = document.querySelector(".blog-info-data-warning");
 const subscribeEmail = document.querySelector(".subscribeEmail");
 const blogSubmit = document.querySelector(".blog-submit");
+const heroBtnOne = document.querySelector(".heroBtnOne");
+const heroBtnTwo = document.querySelector(".heroBtnTwo");
+const heroBtnThree = document.querySelector(".heroBtnThree");
+const heroHrOne = document.querySelector(".heroHrOne");
+const heroHrTwo = document.querySelector(".heroHrTwo");
+const heroHrThree = document.querySelector(".heroHrThree");
+const caraousel = document.querySelector(".caraousel");
 
 const doctors = [
   {
@@ -322,16 +329,49 @@ blogSubmit.addEventListener("click", (e) => {
     subscribeWarning.style.visibility = "visible";
     subscribeWarning.innerText = `required field !!`;
     subscribeWarning.style.color = "red";
-    
-  } else if(!/^\S+@\S+\.\S+$/.test(subscribeEmail.value.trim())) {
+  } else if (!/^\S+@\S+\.\S+$/.test(subscribeEmail.value.trim())) {
     subscribeWarning.style.visibility = "visible";
     subscribeWarning.innerText = "invalid email!!";
     subscribeWarning.style.color = "red";
-   
   } else {
     subscribeWarning.style.visibility = "hidden";
-    subscribeEmail.value="";
-    
+    subscribeEmail.value = "";
   }
-  
+});
+
+heroHrOne.style.backgroundColor = "blue";
+heroHrTwo.style.backgroundColor = "transparent";
+heroHrThree.style.backgroundColor = "transparent";
+heroHrOne.style.border = "2px solid blue";
+heroHrTwo.style.border = "2px solid transparent";
+heroHrThree.style.border = "2px solid transparent";
+
+heroBtnOne.addEventListener("click", () => {
+  heroHrOne.style.backgroundColor = "blue";
+  heroHrTwo.style.backgroundColor = "transparent";
+  heroHrThree.style.backgroundColor = "transparent";
+  heroHrOne.style.border = "2px solid blue";
+  heroHrTwo.style.border = "2px solid transparent";
+  heroHrThree.style.border = "2px solid transparent";
+  caraousel.style.transform = "translateX(0%)";
+});
+
+heroBtnTwo.addEventListener("click", () => {
+  heroHrOne.style.backgroundColor = "transparent";
+  heroHrTwo.style.backgroundColor = "blue";
+  heroHrThree.style.backgroundColor = "transparent";
+  heroHrOne.style.border = "2px solid transparent"
+  heroHrTwo.style.border = "2px solid blue";
+  heroHrThree.style.border = "2px solid transparent";
+  caraousel.style.transform = "translateX(-100%)";
+});
+
+heroBtnThree.addEventListener("click", () => {
+  heroHrOne.style.backgroundColor = "transparent";
+  heroHrTwo.style.backgroundColor = "transparent";
+  heroHrThree.style.backgroundColor = "blue";
+  heroHrOne.style.border = "2px solid transparent";
+  heroHrTwo.style.border = "2px solid transparent";
+  heroHrThree.style.border = "2px solid blue";
+  caraousel.style.transform = "translateX(-200%)";
 });
