@@ -2,14 +2,16 @@
   position: relative;
 
   &-content {
+    position: relative;
+
     margin: auto;
 
     &-links {
       display: none;
       flex-direction: column;
       gap: 18px;
-      margin-left: -8rem;
-      margin-top: 20rem;
+      // margin-left: -8rem;
+      // margin-top: 20rem;
       position: absolute;
 
       img {
@@ -19,7 +21,8 @@
       }
 
       img:hover {
-        filter: invert(44%) sepia(65%) saturate(4522%) hue-rotate(206deg) brightness(90%) contrast(86%);
+        filter: invert(44%) sepia(65%) saturate(4522%) hue-rotate(206deg)
+          brightness(90%) contrast(86%);
         border-bottom: 2px solid var(--blue);
         transition: 0.2s ease-in-out;
       }
@@ -30,6 +33,7 @@
       justify-content: space-between;
       position: relative;
       display: flex;
+      
 
       &-text {
         display: flex;
@@ -78,6 +82,7 @@
     display: flex;
     height: 130px;
     gap: 1rem;
+    justify-content: center;
     align-items: center;
     width: 100%;
     position: absolute;
@@ -92,7 +97,7 @@
     }
 
     &-stats {
-      font-size: 30px;
+      font-size: 24px;
       font-weight: 600;
       background-color: #091a56;
       padding: 10px;
@@ -108,14 +113,20 @@
 
     .aqua {
       color: #c2fffb;
+      height: 56px;
+      min-width: 58px;
     }
 
     .bisque {
       color: #ffe8af;
+      height: 56px;
+      width: 70px;
     }
 
     .pink {
       color: #ffd3c9;
+      height: 56px;
+      width: 58px;
     }
   }
 }
@@ -174,7 +185,10 @@
 
     &-data {
       bottom: 0px;
-      justify-content: start;
+
+      &-stats {
+        font-size: 30px;
+      }
     }
   }
 }
@@ -182,10 +196,6 @@
 @media (min-width: 1024px) {
   .banner {
     &-content {
-      &-links {
-        display: flex;
-      }
-
       &-hero {
         &-heading {
           font-size: 56px;
@@ -207,6 +217,10 @@
         }
       }
     }
+
+    &-data {
+      justify-content: start;
+    }
   }
 }
 
@@ -219,8 +233,14 @@
     background-size: 30%;
 
     &-content {
+      &-links {
+        display: flex;
+        top: 16rem;
+        left: 1.5rem;
+      }
       &-hero {
         &-text {
+          margin-left: 4rem;
           margin-top: 10rem;
         }
 

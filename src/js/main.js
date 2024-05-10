@@ -5,6 +5,9 @@ const doctorsList = document.querySelector(".our-team-content-list");
 const doctorContainer = document.querySelector(".our-team-content-images");
 const viewAllDoctor = document.querySelector(".viewAllDoctor");
 const searchDoctor = document.querySelector(".our-team-input");
+const patients = document.querySelector(".aqua");
+const surgeries = document.querySelector(".bisque");
+const brilliantDocs = document.querySelector(".pink");
 
 const doctors = [
   {
@@ -45,7 +48,7 @@ const doctors = [
     details: "MBBS MS",
   },
   {
-    name: " Dr. Andrew",
+    name: " Dr. Alex",
     role: "Nefrologists",
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MBBS",
@@ -57,49 +60,49 @@ const doctors = [
     details: "MBBS MD",
   },
   {
-    name: " Dr. Andrew",
+    name: " Dr. Bran",
     role: "Dermatologists",
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MBBS",
   },
   {
-    name: " Dr. Kirti",
+    name: " Dr. Quet",
     role: "Gynecologist",
     imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD MS",
   },
   {
-    name: " Dr. Barlina",
+    name: " Dr. Balina",
     role: "ENT Specialist",
     imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD",
   },
   {
-    name: " Dr. Brendon",
+    name: " Dr. Dron",
     role: "ENT Specialist",
     imgUrl: "./images/content/images/team/brendon.webp",
     details: "MBBS",
   },
   {
-    name: " Dr. Barlina",
+    name: " Dr. Sabista",
     role: "Paediatrician",
     imgUrl: "./images/content/images/team/lady.webp",
     details: "MS",
   },
   {
-    name: " Dr. Brendon",
+    name: " Dr. Holf",
     role: "Pulmonologist",
     imgUrl: "./images/content/images/team/brendon.webp",
     details: "MBBS",
   },
   {
-    name: " Dr. Andrew",
+    name: " Dr. Rex",
     role: "Endocrinologist",
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MBBS",
   },
   {
-    name: " Dr. Kirti",
+    name: " Dr. Puz",
     role: "Oncologist",
     imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD MS",
@@ -129,13 +132,13 @@ const doctors = [
     details: "MBBS",
   },
   {
-    name: " Dr. Andrew",
+    name: " Dr. Rew",
     role: "Gynecologist",
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MD",
   },
   {
-    name: " Dr. Barlina",
+    name: " Dr. Balina",
     role: "ENT Specialist",
     imgUrl: "./images/content/images/team/lady.webp",
     details: "MD MS",
@@ -147,7 +150,7 @@ const doctors = [
     details: "MBBS",
   },
   {
-    name: " Dr. And",
+    name: " Dr. Yusuf",
     role: "Pulmonologist",
     imgUrl: "./images/content/images/team/andrew.webp",
     details: "MBBS",
@@ -159,7 +162,7 @@ const doctors = [
     details: "MBBS MD",
   },
   {
-    name: " Dr. Kirti",
+    name: " Dr. Lim",
     role: "Endocrinologist",
     imgUrl: "./images/content/images/team/kirti.webp",
     details: "MD MS",
@@ -173,6 +176,35 @@ const doctors = [
 ];
 
 cross.style.display = "none";
+
+let val = 0;
+const patientsIntervalId = setInterval(() => {
+  if (val < 100) {
+    val = val + 10;
+    patients.innerText = val;
+  }
+
+  else if (val >= 100) {
+    patients.innerText = (val / 1000).toFixed(1) + "k";
+    val += 100;
+  }
+  
+  if (val === 5000) {
+    patients.innerText = "5k";
+    clearInterval(patientsIntervalId);
+  }
+}, 100);
+
+const surgeriesIntervalId = setInterval(() => {
+  surgeries.innerText = Number(surgeries.innerText) + 1;
+  if (Number(surgeries.innerText) === 627) clearInterval(surgeriesIntervalId);
+}, 1);
+
+const briliiantIntervalId = setInterval(() => {
+  brilliantDocs.innerText = Number(brilliantDocs.innerText) + 1;
+  if (Number(brilliantDocs.innerText) === 37)
+    clearInterval(briliiantIntervalId);
+}, 60);
 
 function display() {
   if (ul.style.display === "flex") {
@@ -236,10 +268,14 @@ displayDoctors(doctors);
 doctorsList.addEventListener("click", (e) => {
   if (e.target.className === "our-team-content-item") {
     showDoctors(e.target.innerText);
+    searchDoctor.value = "";
   }
 });
 
-viewAllDoctor.addEventListener("click", () => displayDoctors(doctors));
+viewAllDoctor.addEventListener("click", () => {
+  displayDoctors(doctors);
+  searchDoctor.value = "";
+});
 
 searchDoctor.addEventListener("input", (e) => {
   // console.log(e.target.value)
