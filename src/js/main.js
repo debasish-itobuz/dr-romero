@@ -23,6 +23,14 @@ const heroHrOne = document.querySelector(".heroHrOne");
 const heroHrTwo = document.querySelector(".heroHrTwo");
 const heroHrThree = document.querySelector(".heroHrThree");
 const caraousel = document.querySelector(".caraousel");
+const testimonialCaraousel = document.querySelector(".testimonial-caraousel");
+const leftArrow = document.querySelector(".left-arrow");
+const rightArrow = document.querySelector(".right-arrow");
+const testimonialDoctors = document.querySelector(".testimonial-items-content-info");
+
+const testimonialDoctorsArray = ["./images/content/images/testimonial/briana.png",
+  "./images/content/images/testimonial/doctor.png",
+  "./images/content/images/testimonial/girl.png"]
 
 const doctors = [
   {
@@ -191,6 +199,7 @@ const doctors = [
 ];
 
 let patientCount = 0;
+let caraoselCount = 0
 
 cross.style.display = "none";
 
@@ -224,7 +233,7 @@ const patientsIntervalId = setInterval(() => {
     patients.innerText = "5k";
     clearInterval(patientsIntervalId);
   }
-}, 100);
+}, 50);
 
 const surgeriesIntervalId = setInterval(() => {
   surgeries.innerText = Number(surgeries.innerText) + 1;
@@ -374,4 +383,22 @@ heroBtnThree.addEventListener("click", () => {
   heroHrTwo.style.border = "2px solid transparent";
   heroHrThree.style.border = "2px solid blue";
   caraousel.style.transform = "translateX(-200%)";
+});
+
+
+
+leftArrow.addEventListener("click", () => {
+  if (caraoselCount <= 0) caraoselCount = 3;
+  testimonialCaraousel.style.transform = `translateX(-${--caraoselCount * 100}%)`;
+  setTimeout(()=>{
+    testimonialDoctors.src = testimonialDoctorsArray[caraoselCount];
+  },300)
+});
+
+rightArrow.addEventListener("click", () => {
+  if (caraoselCount >= 2) caraoselCount = -1;
+  testimonialCaraousel.style.transform = `translateX(-${++caraoselCount * 100}%)`;
+  setTimeout(()=>{
+    testimonialDoctors.src = testimonialDoctorsArray[caraoselCount];
+  },300)
 });
