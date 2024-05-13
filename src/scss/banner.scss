@@ -10,8 +10,6 @@
       display: none;
       flex-direction: column;
       gap: 18px;
-      // margin-left: -8rem;
-      // margin-top: 20rem;
       position: absolute;
 
       img {
@@ -73,7 +71,7 @@
           position: relative;
           max-width: 600px;
           object-fit: cover;
-          z-index: 5;
+          z-index: 4;
         }
       }
     }

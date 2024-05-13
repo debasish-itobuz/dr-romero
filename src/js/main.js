@@ -1,4 +1,4 @@
-const ul = document.getElementById("myLinks");
+const myLinks = document.getElementById("myLinks");
 const bar = document.querySelector(".bars");
 const cross = document.querySelector(".cross");
 const doctorsList = document.querySelector(".our-team-content-list");
@@ -28,9 +28,11 @@ const leftArrow = document.querySelector(".left-arrow");
 const rightArrow = document.querySelector(".right-arrow");
 const testimonialDoctors = document.querySelector(".testimonial-items-content-info");
 
-const testimonialDoctorsArray = ["./images/content/images/testimonial/briana.png",
+const testimonialDoctorsArray = [
+  "./images/content/images/testimonial/briana.png",
   "./images/content/images/testimonial/doctor.png",
-  "./images/content/images/testimonial/girl.png"]
+  "./images/content/images/testimonial/girl.png"
+]
 
 const doctors = [
   {
@@ -228,7 +230,6 @@ const patientsIntervalId = setInterval(() => {
     patients.innerText = (patientCount / 1000).toFixed(1) + "k";
     patientCount += 100;
   }
-
   if (patientCount === 5000) {
     patients.innerText = "5k";
     clearInterval(patientsIntervalId);
@@ -247,10 +248,10 @@ const briliiantIntervalId = setInterval(() => {
 }, 60);
 
 function display() {
-  if (ul.style.display === "flex") {
-    ul.style.display = "none";
+  if (myLinks.style.display === "flex") {
+    myLinks.style.display = "none";
   } else {
-    ul.style.display = "flex";
+    myLinks.style.display = "flex";
   }
 }
 
@@ -320,7 +321,6 @@ cross.addEventListener("click", () => {
 
 footerSubmit.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(fullName.value);
   if (
     validation(0, fullName) &&
     validation(1, email) &&
@@ -385,20 +385,18 @@ heroBtnThree.addEventListener("click", () => {
   caraousel.style.transform = "translateX(-200%)";
 });
 
-
-
 leftArrow.addEventListener("click", () => {
   if (caraoselCount <= 0) caraoselCount = 3;
   testimonialCaraousel.style.transform = `translateX(-${--caraoselCount * 100}%)`;
-  setTimeout(()=>{
+  setTimeout(() => {
     testimonialDoctors.src = testimonialDoctorsArray[caraoselCount];
-  },300)
+  }, 300)
 });
 
 rightArrow.addEventListener("click", () => {
   if (caraoselCount >= 2) caraoselCount = -1;
   testimonialCaraousel.style.transform = `translateX(-${++caraoselCount * 100}%)`;
-  setTimeout(()=>{
+  setTimeout(() => {
     testimonialDoctors.src = testimonialDoctorsArray[caraoselCount];
-  },300)
+  }, 300)
 });
